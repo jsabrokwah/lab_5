@@ -62,18 +62,17 @@ tail -n +2 "$INPUT_FILE" | while IFS=',' read -r username fullname groupname ema
         log "Creating user: $username ($fullname) in group $groupname"
         sudo useradd -m -g "$groupname" -c "$fullname" "$username"
 
-        echo "$username:$TEMP_PASS" | chpasswd
+        echo "$username:$TEMP_PASS" | sudo chpasswd
         log "Set temporary password for $username"
 
-        chage -d 0 "$username"
+        sudo chage -d 0 "$username"
         log "Password will be changed at first login"
 
-        chmod 700 "/home/$username"
+        sudo chmod 700 "/home/$username"
         log "Set /home/$username permissions to 700"
 
         WELCOME_MSG="/home/$username/WELCOME.txt"
-        tee "$WELCOME_MSG" > /dev/null <<EOF
-Hello $fullname,
+        echo "Hello $fullname,
 
 Your Linux account has been created.
 
@@ -82,11 +81,10 @@ Temporary Password: $TEMP_PASS
 
 Please change your password upon login.
 
-Thank you.
-EOF
+Thank you." | sudo tee "$WELCOME_MSG" > /dev/null
 
-        chown "$username:$groupname" "$WELCOME_MSG"
-        chmod 600 "$WELCOME_MSG"
+        sudo chown "$username:$groupname" "$WELCOME_MSG"
+        sudo chmod 600 "$WELCOME_MSG"
 
         echo "$username,$fullname,$TEMP_PASS" >> "$CREDS_FILE"
 
