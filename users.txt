@@ -1,4 +1,4 @@
 username,fullname,group,email
-jdoe,John Doe,engineering,jdoe@example.com
-asmith,Alice Smith,engineering,asmith@example.com
-mjones,Mike Jones,design,mjones@example.com
+jdoe,John Doe,engineering,jsabrokwahsenior@gmail.com.com
+asmith,Alice Smith,engineering,joseph.abrokwah@amalitechtraining.org
+mjones,Mike Jones,design,josephabrokwahsenior@gmail.com

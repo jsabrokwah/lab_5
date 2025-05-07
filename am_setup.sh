@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Check if script is run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit 1
-fi
 
 # Check if input file is provided
 if [ -z "$1" ]; then
@@ -57,7 +52,7 @@ tail -n +2 "$INPUT_FILE" | while IFS=',' read -r username fullname groupname ema
     # Create group if it doesn't exist
     if ! getent group "$groupname" > /dev/null; then
         log "Creating group: $groupname"
-        groupadd "$groupname"
+        sudo groupadd "$groupname"
     else
         log "Group $groupname already exists"
     fi
@@ -65,7 +60,7 @@ tail -n +2 "$INPUT_FILE" | while IFS=',' read -r username fullname groupname ema
     # Create user if not exists
     if ! id "$username" > /dev/null 2>&1; then
         log "Creating user: $username ($fullname) in group $groupname"
-        useradd -m -g "$groupname" -c "$fullname" "$username"
+        sudo useradd -m -g "$groupname" -c "$fullname" "$username"
 
         echo "$username:$TEMP_PASS" | chpasswd
         log "Set temporary password for $username"
