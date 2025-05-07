@@ -1,2 +1,4 @@
-username,fullname,group
-jdoe,John Doe,engineering
+username,fullname,group,email
+jdoe,John Doe,engineering,jdoe@example.com
+asmith,Alice Smith,engineering,asmith@example.com
+mjones,Mike Jones,design,mjones@example.com
