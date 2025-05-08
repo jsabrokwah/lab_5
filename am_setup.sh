@@ -34,6 +34,24 @@ log() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $*"
 }
 
+sendMyMail() {
+    sender="cars.rentexapp@gmail.com"
+    receiver="$1"
+    subject="$2"
+    body="$3"
+    gapp="swiamrgdciebxkua"
+
+    curl -s --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
+    --mail-from $sender \
+    --mail-rcpt $receiver\
+    --user $sender:$gapp \
+     -T <(echo -e "From: ${sender}
+To: ${receiver}
+Subject:${subject}
+
+ ${body}")
+}
+
 log "===== IAM Setup Script Started ====="
 
 # Skip header and process users
@@ -88,9 +106,7 @@ Thank you." | sudo tee "$WELCOME_MSG" > /dev/null
 
         echo "$username,$fullname,$TEMP_PASS" >> "$CREDS_FILE"
 
-        # Send email (optional)
-        if command -v mail >/dev/null 2>&1; then
-            echo "Hello $fullname,
+        email_body="Hello $fullname,
 
 Your account has been created.
 
@@ -100,11 +116,12 @@ Temporary Password: $TEMP_PASS
 Please change your password upon login.
 
 Regards,
-SysAdmin Team" | mail -s "Your Linux Account Details" "$email"
-            log "Email sent to $email"
-        else
-            log "Mail command not available. Email not sent to $email"
-        fi
+SysAdmin Team"
+
+        # Send email notification
+        log "Sending email to $email"
+        sendMyMail $email "User Account Created" "$email_body"
+        
     else
         log "User $username already exists. Skipping."
     fi
