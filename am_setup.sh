@@ -3,7 +3,7 @@
 
 # Check if input file is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <path_to_users.txt>"
+    echo "Usage: $0 <path_to_users.txt> or $0 <path_to_users.csv>"
     exit 1
 fi
 

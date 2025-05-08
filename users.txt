@@ -1,4 +1,4 @@
 username,fullname,group,email
-jdoe,John Doe,engineering,jsabrokwahsenior@gmail.com.com
+jdoe,John Doe,engineering,jsabrokwahsenior@gmail.com
 asmith,Alice Smith,engineering,joseph.abrokwah@amalitechtraining.org
 mjones,Mike Jones,design,josephabrokwahsenior@gmail.com
