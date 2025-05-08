@@ -1,0 +1,46 @@
+2025-05-08 03:24:54 - ===== IAM Setup Script Started =====
+2025-05-08 03:24:54 - ----------------------------------------
+2025-05-08 03:24:54 - Processing user: jdoe
+2025-05-08 03:24:54 - Group engineering already exists
+2025-05-08 03:24:54 - Creating user: jdoe (John Doe) in group engineering
+2025-05-08 03:24:54 - Set temporary password for jdoe
+2025-05-08 03:24:54 - Password will be changed at first login
+2025-05-08 03:24:54 - Set /home/jdoe permissions to 700
+2025-05-08 03:24:54 - Sending email to jsabrokwahsenior@gmail.com
+2025-05-08 03:24:55 - Generated fallback complex password for asmith
+2025-05-08 03:24:55 - ----------------------------------------
+2025-05-08 03:24:55 - Processing user: asmith
+2025-05-08 03:24:55 - Group engineering already exists
+2025-05-08 03:24:55 - Creating user: asmith (Alice Smith) in group engineering
+2025-05-08 03:24:55 - Set temporary password for asmith
+2025-05-08 03:24:55 - Password will be changed at first login
+2025-05-08 03:24:55 - Set /home/asmith permissions to 700
+2025-05-08 03:24:55 - Sending email to joseph.abrokwah@amalitechtraining.org
+2025-05-08 03:24:56 - Generated fallback complex password for mjones
+2025-05-08 03:24:56 - ----------------------------------------
+2025-05-08 03:24:56 - Processing user: mjones
+2025-05-08 03:24:56 - Group design already exists
+2025-05-08 03:24:56 - Creating user: mjones (Mike Jones) in group design
+2025-05-08 03:24:56 - Set temporary password for mjones
+2025-05-08 03:24:56 - Password will be changed at first login
+2025-05-08 03:24:56 - Set /home/mjones permissions to 700
+2025-05-08 03:24:56 - Sending email to josephabrokwahsenior@gmail.com
+2025-05-08 03:24:57 - IAM setup script completed successfully.
+2025-05-08 03:31:31 - ===== IAM Setup Script Started =====
+2025-05-08 03:31:31 - ----------------------------------------
+2025-05-08 03:31:31 - Processing user: kterminator
+2025-05-08 03:31:31 - Group assasin already exists
+2025-05-08 03:31:31 - Creating user: kterminator (Kofi Terminator) in group assasin
+2025-05-08 03:31:31 - Set temporary password for kterminator
+2025-05-08 03:31:31 - Password will be changed at first login
+2025-05-08 03:31:31 - Set /home/kterminator permissions to 700
+2025-05-08 03:31:31 - Sending email to jsabrokwahsenior@gmail.com
+2025-05-08 03:31:31 - ----------------------------------------
+2025-05-08 03:31:31 - Processing user: amonster
+2025-05-08 03:31:31 - Group anime already exists
+2025-05-08 03:31:31 - Creating user: amonster (Adwo Monster) in group anime
+2025-05-08 03:31:31 - Set temporary password for amonster
+2025-05-08 03:31:31 - Password will be changed at first login
+2025-05-08 03:31:31 - Set /home/amonster permissions to 700
+2025-05-08 03:31:31 - Sending email to joseph.abrokwah@amalitechtraining.org
+2025-05-08 03:31:31 - IAM setup script completed successfully.
